@@ -62,11 +62,3 @@ gpfs::bindmounts::mountmap:
 ## Reference
 
 [REFERENCE.md](REFERENCE.md)
-
-### define profile_gpfs_client::gpfsmount (
--  String $src,
--  Optional[String] $fstype = 'gpfs',
--  Optional[String] $opts = 'defaults',
-### class profile_gpfs_client (
--  Array[ String ] $required_pkgs,
--  Hash $mountmap,
