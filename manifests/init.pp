@@ -22,10 +22,10 @@ class profile_gpfs_client (
 
   $clean_hostlist = unique( [ $gpfs_master ] + $manager_hostlist )
 
-  ::ssh::allow_from{ 'profile::gpfs_client':
-    hostlist              => $clean_hostlist,
-    pam_access_users      => [root],
-    sshd_cfg_match_params => $params,
+  ::sshd::allow_from{ 'profile::gpfs_client':
+    hostlist                => $clean_hostlist,
+    users                   => [root],
+    additional_match_params => $params,
   }
 
   # DISABLE SETUID ON GPFS BINARIES

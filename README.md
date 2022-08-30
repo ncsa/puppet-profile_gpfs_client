@@ -56,6 +56,7 @@ gpfs::bindmounts::mountmap:
 
 ## Dependencies
 
+- https://github.com/ncsa/puppet-sshd
 - https://github.com/ncsa/puppet-spectrumscale
 
 
